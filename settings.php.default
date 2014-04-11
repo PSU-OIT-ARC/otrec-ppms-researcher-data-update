@@ -1,0 +1,18 @@
+<?php
+
+$database = array(
+    'source' => array(
+        'driver' => 'mysql',
+        'host' => '',
+        'database' => '',
+        'user' => '',
+        'password' => '',
+    ),
+    'target' => array(
+        'driver' => 'mysql',
+        'host' => '',
+        'database' => '',
+        'user' => '',
+        'password' => ''
+    )
+);
