@@ -142,7 +142,7 @@ function help() {
     -v : Execute verbose
     -y : Execute without confirmation
     -d [directory_path] : Set file path to save migrated files to (omit trailing slash)
-    -d [url_path_prefix] : Set url prefix where the files can be located via http (omit trailing slash)
+    -p [url_path_prefix] : Set url prefix where the files can be located via http (omit trailing slash)
     
     NOTE: If you omit the URL prefix [-d] option, the url prefix value will default to the directory path.
     
