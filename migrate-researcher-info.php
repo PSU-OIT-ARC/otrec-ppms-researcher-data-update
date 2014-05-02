@@ -180,7 +180,7 @@ function updateResearcher($row, $db) {
         // save image here if it exists and can be downloaded
         $photo = downloadFile($row['photo']);
         if ($photo) {
-            $sql = 'UPDATE user SET photo = ?, title = ?, profile = ?, website = ?WHERE user_id = ?';
+            $sql = 'UPDATE user SET photo = ?, title = ?, profile = ?, website = ? WHERE user_id = ?';
             $values[] = $httppath . '/' . $photo;
         }
 
