@@ -110,6 +110,7 @@ CD.field_id_36 AS degree_1,
 CD.field_id_37 AS degree_2,
 CD.field_id_38 AS degree_3,
 CD.field_id_39 AS degree_4,
+CD.field_id_40 AS website,
 CD.field_id_41 AS profile,
 CD.field_id_59 AS photo
 FROM exp_channel_titles AS CT
@@ -179,12 +180,13 @@ function updateResearcher($row, $db) {
         // save image here if it exists and can be downloaded
         $photo = downloadFile($row['photo']);
         if ($photo) {
-            $sql = 'UPDATE user SET photo = ?, title = ?, profile = ? WHERE user_id = ?';
+            $sql = 'UPDATE user SET photo = ?, title = ?, profile = ?, website = ? WHERE user_id = ?';
             $values[] = $httppath . '/' . $photo;
         }
 
         $values[] = $row['job_title'];
         $values[] = $row['profile'];
+        $values[] = $row['website'];
         $values[] = $researcher['user_id'];
         
         $stmt = $db->prepare($sql);
