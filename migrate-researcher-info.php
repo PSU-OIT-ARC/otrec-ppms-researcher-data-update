@@ -174,13 +174,13 @@ function updateResearcher($row, $db) {
         echo $verbose ? "*'".$row['email'] ."',\n" : '';
         
         // Update researcher title (and photo if set)
-        $sql = 'UPDATE user SET title = ?, profile = ? WHERE user_id = ?';
+        $sql = 'UPDATE user SET title = ?, profile = ?, website = ? WHERE user_id = ?';
         $values = array();
         
         // save image here if it exists and can be downloaded
         $photo = downloadFile($row['photo']);
         if ($photo) {
-            $sql = 'UPDATE user SET photo = ?, title = ?, profile = ?, website = ? WHERE user_id = ?';
+            $sql = 'UPDATE user SET photo = ?, title = ?, profile = ?, website = ?WHERE user_id = ?';
             $values[] = $httppath . '/' . $photo;
         }
 
